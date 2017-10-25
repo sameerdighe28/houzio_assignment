@@ -9,33 +9,33 @@ $(document).ready(function() {
 	/**
 	 * Map Leaflet Contact
 	 */
-	if ($('#map-contact').length) {
-		var map = L.map('map-contact', {
-			zoom: 12,
-			maxZoom: 20,
-			center: [40.761077, -73.88]
-		});			
+	// if ($('#map-contact').length) {
+	// 	var map = L.map('map-contact', {
+	// 		zoom: 12,
+	// 		maxZoom: 20,
+	// 		center: [40.761077, -73.88]
+	// 	});			
 
-		map.scrollWheelZoom.disable();
-		var access_token = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
+	// 	map.scrollWheelZoom.disable();
+	// 	var access_token = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
 
-		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + access_token, {		
-			scrollWheelZoom: false,		
-			id: 'mapbox.streets',
-			attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
-		}).addTo(map);	
+	// 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + access_token, {		
+	// 		scrollWheelZoom: false,		
+	// 		id: 'mapbox.streets',
+	// 		attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+	// 	}).addTo(map);	
 		
-		var icon = L.divIcon({
-			html: '<i class="fa fa-suitcase"></i>',
-            iconSize: [36, 36],
-            iconAnchor: [36, 36],
-            popupAnchor: [-20, -42]
-        });
+	// 	var icon = L.divIcon({
+	// 		html: '<i class="fa fa-suitcase"></i>',
+ //            iconSize: [36, 36],
+ //            iconAnchor: [36, 36],
+ //            popupAnchor: [-20, -42]
+ //        });
 
-		var marker = L.marker([40.761077, -73.88], {
-			icon: icon
-		}).addTo(map);	
-	}
+	// 	var marker = L.marker([40.761077, -73.88], {
+	// 		icon: icon
+	// 	}).addTo(map);	
+	// }
 
 	/**
 	 * Map Leaflet

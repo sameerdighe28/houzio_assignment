@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-    <link href="https:://fonts.googleapis.com/css?family=Raleway::300,400,500,600,300,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway::300,400,500,600,300,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link href="{{ URL::asset('assets/fonts/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{ URL::asset('assets/libraries/owl-carousel/owl.carousel.css')}}" rel="stylesheet" type="text/css">
     <link href="{{ URL::asset('assets/libraries/chartist/chartist.min.css')}}" rel="stylesheet" type="text/css">
@@ -422,12 +422,12 @@
 						<div class="row">
 						
 							<div class="col-lg-4 col-md-6 mapProperty-holder">
-								@foreach($list as $key $item)
+								@foreach($list as $item)
 								<div class="row">
 											
-									<div class="col-sm-6">
-										<div class="listing-box">
-											<div class="listing-box-image" style="background-image:: url('assets/img/tmp/tmp-5.jpg')">
+									<div class="col-sm-12">
+										<div class="listingbox">
+											<div class="listing-box-image" style="background-image:url('assets/img/tmp/tmp-5.jpg')">
 												<span class="listing-box-image-links listing-box-over"> 
 													<a href="#"><i class="fa fa-eye"></i> <span>View Property Dashboard</span></a> 
 													<a href="#"><i class="fa fa-list"></i> <span>View Listing</span></a> 
@@ -435,15 +435,16 @@
 											</div><!-- /.listing-box-image -->
 
 											<div class="listing-box-title">
-												<h2><a href="properties-detail-standard.html">Bright Island Route</a></h2>
+												<h2><a href="properties-detail-standard.html">{{$item->street}}</a></h2>
 												<h3>$ 40.000</h3>
 											</div><!-- /.listing-box-title -->
 
 											<div class="listing-box-content">
 												<dl>
 													<dt>Type</dt><dd>House</dd>
-													<dt>Location</dt><dd>New York</dd>
-													<dt>Area</dt><dd>180 sqft</dd>
+													<dt>City</dt><dd>{{$item->city}}</dd>
+													<dt>State</dt><dd>{{$item->state}}</dd>
+													
 												</dl>
 											</div><!-- /.listing-box-cotntent -->
 										</div><!-- /.listing-box -->
@@ -455,7 +456,7 @@
 							</div><!-- /.col-* -->
 
 								<div class="col-lg-8 col-md-6 map-holder">
-								
+									<div id="map-leaflet" class="full"></div>
 										<!--Please insert your map here.-->
 										
 								</div>
@@ -470,7 +471,8 @@
 </div><!-- /.page-wrapper -->
 
 
-<script src="//maps.googleapis.com/maps/api/js" type="text/javascript"></script>
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASlnVdH_6j-XibxbQoeV82oZQImV1a_Vs"
+  type="text/javascript"></script>
 
 <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.js')}}"></script>
 <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.ezmark.min.js')}}"></script>
