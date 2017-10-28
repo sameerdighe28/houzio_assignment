@@ -9,158 +9,171 @@ $(document).ready(function() {
 	/**
 	 * Map Leaflet Contact
 	 */
-	// if ($('#map-contact').length) {
-	// 	var map = L.map('map-contact', {
-	// 		zoom: 12,
-	// 		maxZoom: 20,
-	// 		center: [40.761077, -73.88]
-	// 	});			
+	if ($('#map-contact').length) {
+		var map = L.map('map-contact', {
+			zoom: 12,
+			maxZoom: 20,
+			center: [40.761077, -73.88]
+		});			
 
-	// 	map.scrollWheelZoom.disable();
-	// 	var access_token = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
-
-	// 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + access_token, {		
-	// 		scrollWheelZoom: false,		
-	// 		id: 'mapbox.streets',
-	// 		attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
-	// 	}).addTo(map);	
+		map.scrollWheelZoom.disable();
 		
-	// 	var icon = L.divIcon({
-	// 		html: '<i class="fa fa-suitcase"></i>',
- //            iconSize: [36, 36],
- //            iconAnchor: [36, 36],
- //            popupAnchor: [-20, -42]
- //        });
+		var access_token = 'pk.eyJ1IjoiYXZlbmdlcnMyOCIsImEiOiJjajlhNXMwYmgxOW1iMndxcWsyM3N3ZnBkIn0.zGOootjXB64isTkthoa2xQ';
 
-	// 	var marker = L.marker([40.761077, -73.88], {
-	// 		icon: icon
-	// 	}).addTo(map);	
-	// }
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + access_token, {		
+			scrollWheelZoom: false,		
+			id: 'mapbox.streets',
+			attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+		}).addTo(map);	
+		
+		var icon = L.divIcon({
+			html: '<i class="fa fa-suitcase"></i>',
+            iconSize: [36, 36],
+            iconAnchor: [36, 36],
+            popupAnchor: [-20, -42]
+        });
 
+		var marker = L.marker([40.761077, -73.88], {
+			icon: icon
+		}).addTo(map);	
+	}
+
+
+	for(var i = 0 ; i < db_markers.length ; i++){
+		db_markers[i].id = "marker-"+i;
+		db_markers[i].icon = "<i class='fa fa-home'></i>";
+		db_markers[i].title = db_markers[i].street;
+		db_markers[i].price =  "$ 40.000";
+		db_markers[i].image = "{{URL::asset(assets/img/tmp/tmp-1.jpg)}}";
+		db_markers[i].center = [db_markers[i].latitude, db_markers[i].longitude];
+	}
 	/**
 	 * Map Leaflet
+	 * 
 	 */
+
 	if ($('#map-leaflet').length) {
 		var map = L.map('map-leaflet', {
 			zoom: 12,
 			maxZoom: 20,
-			center: [40.761077, -73.88]
+			center: [40.761077, -73.88],
 		});	
 
-		var access_token = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
+		var access_token = 'pk.eyJ1IjoiYXZlbmdlcnMyOCIsImEiOiJjajlhNXMwYmgxOW1iMndxcWsyM3N3ZnBkIn0.zGOootjXB64isTkthoa2xQ';
  		var marker_cluster = L.markerClusterGroup();		
 
 		map.scrollWheelZoom.disable();
 
+	
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + access_token, {		
 			scrollWheelZoom: false,		
 			id: 'mapbox.streets',
 			attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
 		}).addTo(map);
 
-		$.ajax('assets/data/markers.json', {
-			success: function(markers) {
-				$.each(markers, function(index, value) {
-			        var icon = L.divIcon({
-			        	html: value.icon,
-			            iconSize:     [36, 36],
-			            iconAnchor:   [36, 36],
-			            popupAnchor:  [-20, -42]
-			        });
+	
+		
+		$.each(db_markers, function(index, value) {
+			var icon = L.divIcon({
+				html: value.icon,
+				iconSize:     [36, 36],
+				iconAnchor:   [36, 36],
+				popupAnchor:  [-20, -42]
+			});
 
-					var marker = L.marker(value.center, {
-						icon: icon
-					}).addTo(map);		
+			var marker = L.marker(value.center, {
+				icon: icon
+			}).addTo(map);		
 
-	                marker.bindPopup(
-	                    '<div class="listing-window-image-wrapper">' +
-	                        '<a href="properties-detail-standard.html">' +
-	                            '<div class="listing-window-image" style="background-image: url(' + value.image + ');"></div>' +
-	                            '<div class="listing-window-content">' +
-	                                '<div class="info">' +
-	                                    '<h2>' + value.title + '</h2>' +
-	                                    '<h3>' + value.price + '</h3>' +
-	                                '</div>' +
-	                            '</div>' +
-	                        '</a>' +
-	                    '</div>'
-	                );
+			marker.bindPopup(
+				'<div class="listing-window-image-wrapper">' +
+					'<a href="properties-detail-standard.html">' +
+						'<div class="listing-window-image" style="background-image: url(' + value.image + ');"></div>' +
+						'<div class="listing-window-content">' +
+							'<div class="info">' +
+								'<h2>' + value.title + '</h2>' +
+								'<h3>' + value.price + '</h3>' +
+							'</div>' +
+						'</div>' +
+					'</a>' +
+				'</div>'
+			);
 
-					marker_cluster.addLayer(marker);
-				});
-
-				map.addLayer(marker_cluster);
-			}
+			marker_cluster.addLayer(marker);
 		});
+
+		map.addLayer(marker_cluster);
+			
+		
 	}
 
 	/**
 	 * Google Map
 	 */
 	if ($('#map-google').length) {
-		$.ajax('assets/data/markers.json', {
-			success: function(values) {
-				var markers = [];
-				var infos = [];
+		
+		var markers = [];
+		var infos = [];
 
-				$.each(values, function(index, value) {
-	                var content = '<div id="' + value.id + '" class="map-popup-content-wrapper"><div class="map-popup-content"><div class="listing-window-image-wrapper">' +
-	                        '<a href="properties-detail-standard.html">' +
-	                            '<div class="listing-window-image" style="background-image: url(' + value.image + ');"></div>' +
-	                            '<div class="listing-window-content">' +
-	                                '<div class="info">' +
-	                                    '<h2>' + value.title + '</h2>' +
-	                                    '<h3>' + value.price + '</h3>' +
-	                                '</div>' +
-	                            '</div>' +
-	                        '</a>' +
-	                    '</div></div><i class="fa fa-close close"></i></div>' +
-	                    '<div class="map-marker">' + value.icon + '</div>';
+		$.each(db_markers, function(index, value) {
+			var content = '<div id="' + value.id + '" class="map-popup-content-wrapper"><div class="map-popup-content"><div class="listing-window-image-wrapper">' +
+					'<a href="properties-detail-standard.html">' +
+						'<div class="listing-window-image" style="background-image: url(' + value.image + ');"></div>' +
+						'<div class="listing-window-content">' +
+							'<div class="info">' +
+								'<h2>' + value.title + '</h2>' +
+								'<h3>' + value.price + '</h3>' +
+							'</div>' +
+						'</div>' +
+					'</a>' +
+				'</div></div><i class="fa fa-close close"></i></div>' +
+				'<div class="map-marker">' + value.icon + '</div>';
 
-					markers.push({
-						latLng: value.center, 
-						data: value.id,			
-						options: {									
-							content: content,
-							offset: {
-                				x: -18,
-                				y: -42
-              				}							
-						}
-					});
-				});
+			markers.push({
+				latLng: value.center, 
+				data: value.id,			
+				options: {									
+					content: content,
+					offset: {
+						x: -18,
+						y: -42
+					}							
+				}
+			});
+		});
 
-				$('#map-google').gmap3({		
-					map: {									
-						options:{
-							styles: [{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#FFBB00"},{"saturation":43.400000000000006},{"lightness":37.599999999999994},{"gamma":1}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#00FF6A"},{"saturation":-1.0989010989011234},{"lightness":11.200000000000017},{"gamma":1}]},{"featureType":"road.highway","elementType":"all","stylers":[{"hue":"#FFC200"},{"saturation":-61.8},{"lightness":45.599999999999994},{"gamma":1}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":51.19999999999999},{"gamma":1}]},{"featureType":"road.local","elementType":"all","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":52},{"gamma":1}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#0078FF"},{"saturation":-13.200000000000003},{"lightness":2.4000000000000057},{"gamma":1}]}],
-							center:[40.761077, -73.88],
-							scrollwheel: false,
-							zoom: 12
-						}
-					},
-					marker: {
-						cluster: {
-      						radius: 100,
-      					}
-					},
-					overlay: {
-						values: markers,
-						events: {
-							click: function(marker, event, context) {															
-								$('.map-popup-content-wrapper').css('display', 'none');
+		$('#map-google').gmap3({		
+			map: {									
+				options:{
+					styles: [{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#FFBB00"},{"saturation":43.400000000000006},{"lightness":37.599999999999994},{"gamma":1}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#00FF6A"},{"saturation":-1.0989010989011234},{"lightness":11.200000000000017},{"gamma":1}]},{"featureType":"road.highway","elementType":"all","stylers":[{"hue":"#FFC200"},{"saturation":-61.8},{"lightness":45.599999999999994},{"gamma":1}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":51.19999999999999},{"gamma":1}]},{"featureType":"road.local","elementType":"all","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":52},{"gamma":1}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#0078FF"},{"saturation":-13.200000000000003},{"lightness":2.4000000000000057},{"gamma":1}]}],
+					center:[40.761077, -73.88],
+					scrollwheel: false,
+					zoom: 12,
+					maxZoom: 20
+				}
+			},
+			marker: {
+				cluster: {
+					radius: 100,
+				}
+			},
+			overlay: {
+				values: markers,
+				events: {
+					click: function(marker, event, context) {															
+						$('.map-popup-content-wrapper').css('display', 'none');
 
-								if ($(event[0].target).hasClass('close')) {
-									$('#' + context.data).css('display', 'none');
-								} else {
-									$('#' + context.data).css('display', 'block');
-								}
-							}
+						if ($(event[0].target).hasClass('close')) {
+							$('#' + context.data).css('display', 'none');
+						} else {
+							$('#' + context.data).css('display', 'block');
 						}
 					}
-				});					
-			}		
-		});
+				}
+			}
+		});					
+					
+		
 	}
 
 	/**
