@@ -13,342 +13,335 @@
     <link href="assets/css/leaflet.css" rel="stylesheet" type="text/css">
     <link href="assets/css/leaflet.markercluster.css" rel="stylesheet" type="text/css">
     <link href="assets/css/leaflet.markercluster.default.css" rel="stylesheet" type="text/css">    
-    <link href="assets/css/villareal-turquoise.css" rel="stylesheet" type="text/css" id="css-primary">
-	<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+    <link href="assets/css/villareal-blue.css" rel="stylesheet" type="text/css" id="css-primary">
+	<link href="assets/css/overwrite-home.css" rel="stylesheet" type="text/css" id="css-primary">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
 	
-    <title>Villareal - Properties Map</title>
+    <title>Houzeo - Properties Map</title>
+	
+	<script type="text/javascript">
+
+</script>
 </head>
 
 <body class="">
-<div class="page-wrapper">
-		
-    	<div class="header-wrapper">
-	<div class="header header-small">
-		<div class="header-inner">
-			<div class="container-fluid">
-				<div class="header-top">
-					<div class="header-top-inner">
-						<a class="header-logo" href="index.html">
-							<span class="header-logo-shape"></span> 
-							<span class="header-logo-text">Villareal</span>
-						</a><!-- /.header-logo -->
+    <div class="page-wrapper">
+	    <div class="header-wrapper">
+            <div class="header header-small">
+                <div class="header-inner">
+                    <div class="container-fluid">
+                        <div class="header-top">
+                            <div class="header-top-inner">
+                                <span class="header-logo-text"><a class="header-logo" href="index.html"> <img src="assets/hou-imgs/houzeologo.png" alt="HOUZEO LOGO"> </a></span>
+                                <!-- /.header-logo -->
 
-						<a class="header-action" href="properties-submit.html">
-							<i class="fa fa-upload"></i> <span>Upload Property</span>
-						</a><!-- /.header-action -->
+                                <a class="header-action" href="properties-submit.html">
+                                    <i class="fa fa-upload"></i> <span>Upload Property</span>
+                                </a><!-- /.header-action -->
 
 						
-<div class="nav-primary-wrapper collapse navbar-toggleable-sm">
-	<ul class="nav nav-pills nav-primary">
-		<li class="nav-item nav-item-parent">
-			<a href="index.html" class="nav-link ">
-				Home
-			</a>	
-
-			<ul class="sub-menu">
-				<li><a href="index-static-image.html">Static Image</a></li>
-				<li><a href="index-static-image-filter.html">Static Image With Filter</a></li>
-				<li><a href="index-static-image-filter-center.html">Static Image Filter Center</a></li>
-				<li><a href="index-static-image-filter-center.html">Static Image Filter Center</a></li>
-				<li><a href="index-carousel.html">Carousel</a></li>
-				<li><a href="index-osm-filter-horizontal.html">OSM Horizontal Filter</a></li>
-				<li><a href="index-google-maps-filter-vertical.html">Google Maps Vertical Filter</a></li>
-				<li><a href="index-google-maps-filter-horizontal.html">Google Maps Horizontal Filter</a></li>
-			</ul>
-		</li>
-
-		<li class="nav-item nav-item-parent">
-			<a href="properties.html" class="nav-link active">
-				Properties
-			</a>
-
-			<ul class="sub-menu">
-				<li><a href="properties-detail-standard.html">Property Detail Standard</a></li>
-				<li><a href="properties-detail-tabbed.html">Property Detail Tabbed</a></li>
-				<li><a href="properties.html">Row Version</a></li>
-				<li><a href="properties-map.html">Rows + Map</a></li>
-				<li><a href="properties-grid.html">Grid Version</a></li>
-				<li><a href="properties-masonry.html">Masonry Style</a></li>
-				<li><a href="properties-submit.html">Submit Property</a></li>
-				<li><a href="properties-compare.html">Compare Properties</a></li>
-				<li><a href="properties-report.html">Report Abuse Form</a></li>
-			</ul>			
-		</li>	
-		
-		<li class="nav-item nav-item-parent	">
-			<a href="#" class="nav-link ">
-				Agents
-			</a>	
-
-			<ul class="sub-menu">
-				<li><a href="agents-row.html">Agents Row</a></li>
-				<li><a href="agents-grid.html">Agents Grid</a></li>
-				<li><a href="agents-detail.html">Agent Detail</a></li>
-				<li><a href="agents-submit.html">Submit Agent</a></li>
-				<li><a href="agencies-row.html">Agencies Row</a></li>
-				<li><a href="agencies-detail.html">Agency Detail</a></li>
-				<li><a href="agencies-submit.html">Submit Agency</a></li>
-			</ul>		
-		</li>
-
-		<li class="nav-item nav-item-parent">
-			<a href="#" class="nav-link ">
-				Pages
-			</a>
-
-			<ul class="sub-menu">				
-				<li><a href="sticky-header.html">Sticky Header</a></li>
-				<li><a href="pricing.html">Pricing Tables</a></li>
-				<li><a href="filters.html">Filters</a></li>
-				<li><a href="boxes.html">Boxes</a></li>
-				<li><a href="faq.html">FAQ</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="invoice.html">Invoice</a></li>
-				<li><a href="messages.html">Messages</a></li>
-				<li><a href="grid.html">Grid</a></li>
-				<li><a href="registration.html">Registration</a></li>
-				<li><a href="login.html">Login</a></li>
-				<li><a href="reset-password.html">Reset Password</a></li>
-				<li><a href="tables.html">Tables</a></li>
-				<li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
-				<li class="nav-item-parent">
-					<a href="#">Sample Submenu</a>
-
-					<ul class="sub-menu">
-						<li><a href="#">Item 1</a></li>
-						<li><a href="#">Item 2</a></li>
-						<li><a href="#">Item 3</a></li>
-					</ul>
-				</li>
-				<li><a href="403.html">403 - Access Forbidden</a></li>
-				<li><a href="404.html">404 - Not Found</a></li>
-				<li><a href="500.html">500 - Internal Error</a></li>						
-			</ul>
-		</li>		
-
-		<li class="nav-item nav-item-parent">
-			<a href="blog.html" class="nav-link ">
-				Blog
-			</a>	
-
-			<ul class="sub-menu">
-				<li><a href="blog.html">Row Layout</a></li>
-				<li><a href="blog-fullwidth.html">Fullwidth Layout</a></li>
-				<li><a href="blog-grid.html">Grid Version</a></li>
-				<li><a href="blog-grid-fullwidth.html">Grid Fullwidth</a></li>
-				<li><a href="blog-detail.html">Post Detail</a></li>
-				<li><a href="blog-detail-left.html">Detail Left Sidebar</a></li>
-			</ul>		
-		</li>	
-
-		<li class="nav-item nav-item-parent">
-			<a href="dashboard-properties.html" class="nav-link ">
-				Admin
-			</a>	
-
-			<ul class="sub-menu">
-				<li><a href="dashboard-charts.html">Charts</a></li>
-				<li><a href="dashboard-login.html">Login</a></li>
-				<li><a href="dashboard-properties.html">Properties</a></li>
-				<li><a href="dashboard-agents.html">Agents</a></li>
-				<li><a href="dashboard-agencies.html">Agencies</a></li>
-				<li><a href="dashboard-users.html">Users</a></li>
-			</ul>			
-		</li>																
-	</ul><!-- /.nav -->
-</div><!-- /.nav-primary -->
 
 
-						<button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target=".nav-primary-wrapper">
-	                        <span></span>
-	                        <span></span>
-	                        <span></span>
-	                    </button>						
-					</div><!-- /.header-top-inner -->
-				</div><!-- /.header-top -->
-			</div><!-- /.container-fluid -->
-		</div><!-- /.header-inner -->
-	</div><!-- /.header -->
-</div><!-- /.header-wrapper-->    	
+
+											
+					        </div><!-- /.header-top-inner -->
+				        </div><!-- /.header-top -->
+			        </div><!-- /.container-fluid -->
+		        </div><!-- /.header-inner -->
+	        </div><!-- /.header -->
+        </div><!-- /.header-wrapper-->    	
     
 
     <div class="main-wrapper">
 	    <div class="main">
 	        <div class="main-inner">
 	        	
-
 	            <div class="content">
-	                <div class="container-fluid fullwidth-wrapper">
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="filter filter-gray push-bottom">
-				<form method="get" action="?">
-					<div class="row">
-	<div class="col-md-3">
-		<div class="form-group">
-			<label>Location</label>
+				    <div class="row map-filter-nav">
+				        <div class="filter filter-gray push-bottom">
+                            <form method="get" action="?">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                            <div class="input-group filter-search">
+                                                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                                <input placeholder="Address, City or Zip" class="form-control" type="text">
+                                            </div>
+                                    </div><!-- /.col-* -->
+
+                                    <div class="col-md-2">
+                                        <div class="form-group filter-select">
+                                            <select class="form-control">
+                                                <option>Select Property Type</option>
+                                                <option>Apartment</option>
+                                                <option>Independent House / Villa</option>
+                                                <option>Independent Floor</option>
+                                                <option>Studio</option>
+                                                <option>Duplex</option>
+                                                <option>Penthouse</option>
+                                                <option>Row House</option>
+                                            </select>
+                                        </div><!-- /.form-group -->
+                                    </div><!-- /.col-* -->
+
+                                    <div class="col-md-6">
+                                        <div class="collapse navbar-toggleable-sm filter-price">
+                                            <ul class="nav nav-pills nav-primary filter-nav">
+                                                <li class="nav-item nav-item-parent no-right-margin">
+                                                <label class="control-label float-left padding-top-10px font-size14px font-weight800">Price</label>
+                                                        <div class="control-label col-lg-5 col-md-5 no-right-padding">
+                                                            <div class="input-group float-right">
+                                                                <input type="text" name="city" class="form-control" list="minprice" placeholder="$ Min" autocomplete="off" />
+                                                            </div>
+                                                            <datalist id="minprice" class="filter-price-datalist">
+                                                                <option value="$50,000" />
+                                                                <option value="$75,000" />
+                                                                <option value="$100,000" />
+                                                                <option value="$125,000" />
+                                                                <option value="$150,000" />
+                                                                <option value="$175,000" />
+                                                                <option value="$200,000" />
+                                                                <option value="$225,000" />
+                                                                <option value="$250,000" />
+                                                                <option value="$275,000" />
+                                                                <option value="$300,000" />
+                                                                <option value="$350,000" />
+                                                                <option value="$400,000" />
+                                                                <option value="$450,000" />
+                                                                <option value="$500,000" />
+                                                                <option value="$500,000 +" />
+                                                            </datalist>
+                                                        </div>
+                                                        <div class="control-label col-lg-5 col-md-5 no-left-padding no-right-padding">	
+                                                            <div class="input-group float-right">
+                                                                <input type="text" name="maxprice" class="form-control" list="maxprice" placeholder="$ Max" autocomplete="off"/>
+                                                            </div>
+                                                            <datalist id="maxprice">
+                                                                <option value="$50,000" />
+                                                                <option value="$75,000" />
+                                                                <option value="$100,000" />
+                                                                <option value="$125,000" />
+                                                                <option value="$150,000" />
+                                                                <option value="$175,000" />
+                                                                <option value="$200,000" />
+                                                                <option value="$225,000" />
+                                                                <option value="$250,000" />
+                                                                <option value="$275,000" />
+                                                                <option value="$300,000" />
+                                                                <option value="$350,000" />
+                                                                <option value="$400,000" />
+                                                                <option value="$450,000" />
+                                                                <option value="$500,000" />
+                                                                <option value="$500,000 +" />
+                                                            </datalist>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item nav-item-parent	more-filter">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group filter-select">
+                                                            <select class="form-control">
+                                                                <option>Agent Commission</option>
+                                                                <option>1% and above</option>
+                                                                <option>1.5% and above</option>
+                                                                <option>2% and above</option>
+                                                                <option>2.5% and above</option>
+                                                                <option>3% and above</option>
+                                                            </select>
+                                                        </div><!-- /.form-group -->
+                                                    </div><!-- /.col-* -->
+                                                </li>
+                                                <li class="nav-item nav-item-parent	more-filter">
+                                                    <div class="col-md-12 no-padding">
+                                                        <div class="form-group filter-select">
+                                                            <select class="form-control">
+                                                                <option>Beds</option>
+                                                                <option>0+ Beds</option>
+                                                                        <option>1+ Beds</option>
+                                                                        <option>2+ Beds</option>
+                                                                        <option>3+ Beds</option>
+                                                                        <option>4+ Beds</option>
+                                                                        <option>5+ Beds</option>
+                                                                        <option>6+ Beds</option>
+                                                            </select>
+                                                        </div><!-- /.form-group -->
+                                                    </div><!-- /.col-* -->
+                                                </li>
+                                                <li class="nav-item nav-item-parent	more-filter">
+                                                    <label class="control-label float-left padding-top-10px font-size14px font-weight800">More Filters <i class="fa fa-caret-down margin-left-5px" aria-hidden="true"></i></label>										
+
+                                                    <ul class="sub-menu">
+                                                        <li>
+                                                            
+                                                                <div class="form-group col-md-12 filter-select no-bottom-margin filter-select-nav border-bottom-1px-solid border-color1">
+                                                                    <select class="form-control no-padding">
+                                                                        <option>Bathrooms</option>
+                                                                        <option>0+ Beds</option>
+                                                                        <option>1+ Beds</option>
+                                                                        <option>2+ Beds</option>
+                                                                        <option>3+ Beds</option>
+                                                                        <option>4+ Beds</option>
+                                                                        <option>5+ Beds</option>
+                                                                        <option>6+ Beds</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                            
+                                                            
+                                                        </li>
+                                                        <li class="border-bottom-1px-solid border-color1">
+                                                            <div class="form-group col-lg-12 col-md-12 required required-marker">
+                                                                <label class="control-label col-lg-4 col-md-4 no-padding margin-top-15px">Square Feet</label>
+                                                                <div class="col-lg-7 col-md-7 no-padding float-right">
+                                                                <div class="input-group col-lg-5 col-md-5 no-padding">
+                                                                    <input type="text" class="form-control" name="minsSq" placeholder="Min" id="minsq"/>
+                                                                </div>
+                                                                <div class="col-lg-2 col-md-2 no-padding text-align-center padding-top-10px">
+                                                                    -
+                                                                </div>
+                                                                <div class="input-group col-lg-5 col-md-5 no-padding">
+                                                                    <input type="text" class="form-control" name="maxSq" placeholder="Max" id="maxsq"/>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="form-group col-md-12 filter-select no-bottom-margin filter-select-nav border-bottom-1px-solid border-color1">
+                                                            <label class="control-label col-lg-4 col-md-4 no-padding margin-top-15px">Lot Size</label>
+                                                                <div class="col-lg-7 col-md-7 no-padding float-right">
+                                                                    <select class="form-control no-padding">
+                                                                        <option>Any</option>
+                                                                        <option>2,000+ sqft</option>
+                                                                        <option>3,000+ sqft</option>
+                                                                        <option>4,000+ sqft</option>
+                                                                        <option>5,000+ sqft</option>
+                                                                        <option>7,500+ sqft</option>
+                                                                        <option>.25+ acre / 10,890+ sqft</option>
+                                                                        <option>.5+ acre / 21,780+ sqft</option>
+                                                                        <option>1+ acre</option>
+                                                                        <option>2+ acres</option>
+                                                                        <option>5+ acres</option>
+                                                                        <option>10+ acres</option>
+                                                                    </select>
+                                                                </div>
+                                                                </div>
+                                                        </li>
+                                                        <li class="border-bottom-1px-solid border-color1">
+                                                            <div class="form-group col-lg-12 col-md-12 required required-marker">
+                                                                <label class="control-label col-lg-4 col-md-4 no-padding margin-top-15px">Year Built</label>
+                                                                <div class="col-lg-7 col-md-7 no-padding float-right">
+                                                                    <div class="input-group col-lg-5 col-md-5 no-padding">
+                                                                        <input type="text" class="form-control" name="minsSq" placeholder="Min" id="minsq"/>
+                                                                    </div>
+                                                                    <div class="col-lg-2 col-md-2 no-padding text-align-center padding-top-10px">
+                                                                        -
+                                                                    </div>
+                                                                    <div class="input-group col-lg-5 col-md-5 no-padding">
+                                                                        <input type="text" class="form-control" name="maxSq" placeholder="Max" id="maxsq"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="form-group col-md-12 filter-select no-bottom-margin filter-select-nav border-bottom-1px-solid border-color1">
+                                                            <label class="control-label col-lg-4 col-md-4 no-padding margin-top-15px">Max HOA</label>
+                                                                <div class="col-lg-7 col-md-7 no-padding float-right">
+                                                                    <select class="form-control no-padding">
+                                                                        <option>Any</option>
+                                                                        <option>$100 / month</option>
+                                                                        <option>$200 / month</option>
+                                                                        <option>$300 / month</option>
+                                                                        <option>$400 / month</option>
+                                                                        <option>$500 / month</option>
+                                                                    </select>
+                                                                </div>
+                                                                </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="form-group col-md-12 filter-select no-bottom-margin filter-select-nav border-bottom-1px-solid border-color1">
+                                                            <label class="control-label col-lg-4 col-md-4 no-padding margin-top-15px">Days on Houzeo</label>
+                                                            <div class="col-lg-7 col-md-7 no-padding float-right">
+                                                                    <select class="form-control no-padding">
+                                                                        <option>Any</option>
+                                                                        <option>1 Day</option>
+                                                                        <option>7 Days</option>
+                                                                        <option>14 Days</option>
+                                                                        <option>30 Days</option>
+                                                                        <option>90 Days</option>
+                                                                        <option>6 Months</option>
+                                                                        <option>12 Months</option>
+                                                                        <option>24 Months</option>
+                                                                        <option>36 Months</option>
+                                                                    </select>
+                                                                </div>
+                                                                </div>
+                                                        </li>
+                                                        <div class="form-group-btn">
+                                                            <button type="submit" class="btn btn-primary btn-block blue-btn">Apply</button>
+                                                        </div>
+                                                    </ul>		
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- /.col-* -->
+                                    
+                                    
+
+                                    <div class="col-md-2">
+                                        <div class="form-group-btn">
+                                            <button type="submit" class="btn btn-primary btn-block blue-btn">Filter</button>
+                                        </div><!-- /.form-group -->		
+                                    </div><!-- /.col-* -->			
+                                </div><!-- /.row -->
+                                
+                            </form>
+			            </div><!-- /.filter -->
+		            </div>
+	                <div class="container-fluid fullwidth-wrapper map-and-property-holder">
+	                    <div class="row">
+	                        <div class="col-lg-4 col-md-6 mapProperty-holder">
+                                @foreach($list as $key => $item)		
+		                        <div class="row">
+			                        <div class="col-sm-12">
+					                    <div class="listing-box">
+                                            <div class="listing-box-image" style="background-image: url('assets/img/tmp/tmp-5.jpg')">
+                                                <span class="listing-box-image-links listing-box-over"> 
+                                                    <a href="#"><i class="fa fa-eye"></i> <span>View Property Dashboard</span></a> 
+                                                    <a href="#"><i class="fa fa-list"></i> <span>View Listing</span></a> 
+                                                </span>		
+                                            </div><!-- /.listing-box-image -->
+
+                                            <div class="listing-box-title">
+                                                <h2><a href="properties-detail-standard.html">{{$item->street}}</a></h2>
+                                                <h3>$ 40.000</h3>
+                                            </div><!-- /.listing-box-title -->
+
+                                            <div class="listing-box-content">
+                                                <dl>
+                                                    <dt>Type</dt><dd>House</dd>
+                                                    <dt>Location</dt><dd>{{$item->city}}</dd>
+                                                    <dt>State </dt><dd>{{$item->state}}</dd>
+                                                    <dt>Area</dt><dd>180 sqft</dd>
+                                                </dl>
+                                            </div><!-- /.listing-box-cotntent -->
+                                        </div><!-- /.listing-box -->
+				                    </div><!-- /.col-* -->
 			
-			<select class="form-control">
-				<option>New York</option>
-				<option>Washington</option>
-			</select>
-		</div><!-- /.form-group -->
-	</div><!-- /.col-* -->
+		                        </div>
+                                @endforeach
+		                    </div><!-- /.col-* -->
 
-	<div class="col-md-3">
-		<div class="form-group">
-			<label>Keyword</label>
-			<input type="text" class="form-control">
-		</div><!-- /.form-group -->
-	</div><!-- /.col-* -->
-
-	<div class="col-md-2">
-		<div class="form-group">
-			<label>Price From</label>
-			<input type="text" class="form-control">
-		</div><!-- /.form-group -->
-	</div><!-- /.col-* -->
-
-	<div class="col-md-2">
-		<div class="form-group">
-			<label>Price To</label>
-			<input type="text" class="form-control">
-		</div><!-- /.form-group -->		
-	</div><!-- /.col-* -->
-
-	<div class="col-md-2">
-		<div class="form-group-btn form-group-btn-placeholder-gap">
-			<button type="submit" class="btn btn-primary btn-block">Filter</button>
-		</div><!-- /.form-group -->		
-	</div><!-- /.col-* -->			
-</div><!-- /.row -->
-					<div class="row filter-options">
-	<div class="col-sm-6">
-		<div class="filter-sort">
-			<strong>Sort By</strong>
-
-			<div class="checkbox-inline">
-				<label><input type="checkbox" name="filter-form-order" checked="checked"> Price</label>
-			</div><!-- /.checkbox -->
-
-			<div class="checkbox-inline">
-				<label><input type="checkbox" name="filter-form-order" checked="checked"> Published</label>
-			</div><!-- /.checkbox -->					
-		</div><!-- /.filter-sort -->
-	</div><!-- /.row -->
-
-	<div class="col-sm-6">
-		<div class="filter-order">
-			<strong>Order By</strong>
-
-			<div class="checkbox-inline">
-				<label><input type="radio" name="filter-form-order" checked="checked"> Asc</label>
-			</div><!-- /.checkbox -->
-
-			<div class="checkbox-inline">
-				<label><input type="radio" name="filter-form-order"> Desc</label>
-			</div><!-- /.checkbox -->
-		</div><!-- /.filter-order -->				
-	</div><!-- /.col-* -->
-</div><!-- /.row -->
-				</form>
-			</div><!-- /.filter -->
-
-@foreach($list as $key => $item)						
-<div class="listing-row">
-	<div class="listing-row-inner">
-		<div class="listing-row-image" style="background-image: url('assets/img/tmp/tmp-5.jpg');">
-			<span class="listing-row-image-links">
-				<a href="properties.html"><i class="fa fa-heart"></i> <span>Add to favorites</span></a>
-				<a href="properties-detail-standard.html"><i class="fa fa-search"></i> <span>View detail</span></a>
-				<a href="properties-compare.html"><i class="fa fa-balance-scale"></i> <span>Compare property</span></a> 
-			</span>				
-		</div>
-        
-		<div class="listing-row-content">
-			<h3><a href="properties-detail-standard.html">{{$item->street}}</a></h3>
-			<h4>$ 40.000</h4>
-
-			<ul class="listing-row-attributes">
-				<li>
-					<strong><i class="fa fa-map-marker"></i>{{$item->city}}</strong>
-					<span>New York</span>
-				</li>
-
-				<li>
-					<strong><i class="fa fa-building"></i> Type</strong>
-					<span>House</span>
-				</li>
-
-				<li>
-					<strong><i class="fa fa-certificate"></i> State</strong>
-					<span>{{$item->state}}</span>
-				</li>
-
-				<li>
-					<strong><i class="fa fa-arrows-alt"></i> Area</strong>
-					<span>180 sqft</span>
-				</li>		
-
-				<li>
-					<strong><i class="fa fa-umbrella"></i> Baths</strong>
-					<span>3</span>
-				</li>
-
-				<li>
-					<strong><i class="fa fa-bed"></i> Bedrooms</strong>
-					<span>5</span>
-				</li>																		
-			</ul>			
-		</div><!-- /.listing-row-content -->
-	</div><!-- /.listing-row-inner -->
-</div><!-- /.listing-row -->
-@endforeach			
-                        			
-						
-
-			<div class="center">
-				<a href="#" class="btn btn-secondary">Load More Properties</a>
-			</div><!-- /.center -->
-		</div><!-- /.col-* -->
-
-		<div class="col-sm-6">
-			<div id="map-leaflet" class="full"></div>
-		</div><!-- /.col-* -->		
-	</div><!-- /.row -->
-</div><!-- /.container -->
+                            <div class="col-lg-8 col-md-6 map-holder">
+                                <div id="map-leaflet" class="full"></div>
+                            </div>
+			
+			
+	                    </div><!-- /.row -->
+                    </div><!-- /.container -->
 	            </div><!-- /.content -->
 	        </div><!-- /.main-inner -->
 	    </div><!-- /.main -->
     </div><!-- /.main-wrapper -->
 </div><!-- /.page-wrapper -->
 
-<div class="customizer">
-	<div class="customizer-content">
-		<h2>Color Variant</h2>
-
-		<ul>
-			<li><a href="assets/css/villareal-turquoise.css" class="background-turquoise"></a></li>
-			<li><a href="assets/css/villareal-orange.css" class="background-orange"></a></li>
-			<li><a href="assets/css/villareal-orange-dark.css" class="background-orange-dark"></a></li>
-			<li><a href="assets/css/villareal-purple.css" class="background-purple"></a></li>
-			<li><a href="assets/css/villareal-cyan.css" class="background-cyan"></a></li>		
-			<li><a href="assets/css/villareal-teal.css" class="background-teal"></a></li>
-			<li><a href="assets/css/villareal-magenta.css" class="background-magenta"></a></li>
-			<li><a href="assets/css/villareal-green.css" class="background-green"></a></li>
-			<li><a href="assets/css/villareal-green-dark.css" class="background-green-dark"></a></li>
-			<li><a href="assets/css/villareal-red.css" class="background-red"></a></li>
-			<li><a href="assets/css/villareal-brown.css" class="background-brown"></a></li>
-			<li><a href="assets/css/villareal-blue.css" class="background-blue"></a></li>			
-			<li><a href="assets/css/villareal-blue-gray.css" class="background-blue-gray"></a></li>			
-			<li><a href="assets/css/villareal-yellow.css" class="background-yellow"></a></li>						
-		</ul>
-	</div><!-- /.customizer-content -->
-
-	<div class="customizer-title">
-		<span><i class="fa fa-cog"></i> Customizer</span>
-	</div><!-- /.customizer-title -->
-</div><!-- /.customizer -->
 
 <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyASlnVdH_6j-XibxbQoeV82oZQImV1a_Vs" type="text/javascript"></script>
 <script>
